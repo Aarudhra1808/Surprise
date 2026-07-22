@@ -1,0 +1,1157 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 20% 15%, rgba(214, 238, 214, 0.35), transparent 45%),
+        radial-gradient(circle at 80% 20%, rgba(198, 232, 198, 0.25), transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(255, 220, 233, 0.35), transparent 50%),
+        linear-gradient(
+            to bottom,
+            #b5dcaf 0%,
+            #cce3c5 25%,
+            #ebe5d8 55%,
+            #fdeef4 80%,
+            #ffdfe9 100%
+        );
+
+    background-attachment: fixed;
+    
+
+    
+
+}
+
+/* soft sunlight */
+
+.gradient{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 15%,
+    rgba(255,255,255,.55),
+    transparent 45%),
+
+    radial-gradient(circle at 80% 10%,
+    rgba(255, 255, 255, 0.607),
+    transparent 45%);
+
+}
+
+body::before{
+
+    content:"";
+    
+    position:absolute;
+    
+    inset:0;
+    
+    background:
+    
+    radial-gradient(
+    
+    circle,
+    
+    rgba(255,255,255,.22),
+    
+    transparent 70%);
+    
+    pointer-events:none;
+    
+    }
+
+.background{
+
+        position:fixed;
+    
+        inset:0;
+    
+        width:100%;
+    
+        height:100%;
+    
+        overflow:hidden;
+    
+        z-index:0;
+    
+    }
+/* =====================================================
+   PARTICLE CANVAS
+===================================================== */
+
+#particleCanvas{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:1;
+
+    pointer-events:none;
+
+}
+
+/* =====================================================
+   PETALS
+===================================================== */
+
+#petal-container{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+/* =====================================================
+   BRANCHES
+===================================================== */
+
+.branch{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    z-index:5;
+
+    animation:branchSway 7s ease-in-out infinite;
+
+    transform-origin:center;
+
+    filter:drop-shadow(0 8px 15px rgba(0,0,0,.15));
+
+}
+
+.top-left{
+
+    top:-10px;
+    left:-20px;
+
+    width:420px;
+    transform:rotate(-3deg);
+
+}
+
+.top-right{
+
+    top:-5px;
+    right:-10px;
+
+    width:350px;
+    transform:rotate(4deg);
+
+}
+
+.bottom-left{
+
+    bottom:0;
+    left:0;
+
+    width:250px;
+    transform:rotate(4deg);
+
+
+}
+
+.bottom-right{
+
+    bottom:0;
+    right:0;
+
+    width:350px;
+    transform:rotate(5deg);
+
+}
+
+
+@keyframes branchSway{
+
+    0%{
+
+        transform:rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:rotate(2deg);
+
+    }
+
+    100%{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+
+    .flowers circle{
+
+                animation:
+                
+                flowerFloat
+                
+                4s ease-in-out infinite;
+                
+                transform-origin:center;
+                
+                }
+                @keyframes flowerFloat{
+
+                    0%{
+                    
+                    transform:scale(1);
+                    
+                    }
+                    
+                    50%{
+                    
+                    transform:scale(1.06);
+                    
+                    }
+                    
+                    100%{
+                    
+                    transform:scale(1);
+                    
+                    }
+                    
+                    }
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container{
+    position:relative;
+    z-index:10;
+    width:430px;
+    text-align:center;
+}
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.container h1{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    color:#37583d;
+
+    margin-top:8px;
+
+    text-shadow:
+    0 3px 12px rgba(0,0,0,.08);
+
+}
+
+.subtitle{
+
+    margin-top:12px;
+
+    color:#5c705d;
+
+    font-size:17px;
+
+    margin-bottom:45px;
+
+}
+
+/* =====================================================
+   LOCK
+===================================================== */
+
+#lock{
+
+    width:120px;
+
+    margin:auto;
+
+    margin-bottom:45px;
+
+    animation:breathe 3.5s ease-in-out infinite;
+
+}
+
+.lock-shackle{
+
+    width:68px;
+
+    height:55px;
+
+    margin:auto;
+
+    border:10px solid #c7cdc9;
+
+    border-bottom:none;
+
+    border-radius:45px 45px 0 0;
+
+    transition:.8s;
+
+}
+
+.lock-body{
+
+    width:120px;
+    
+    height:95px;
+    
+    border-radius:26px;
+    
+    background:
+    
+    linear-gradient(
+    160deg,
+    
+    #8db38b,
+    
+    #73956e,
+    
+    #5f7d5c);
+    
+    box-shadow:
+    
+    0 15px 35px rgba(0,0,0,.15),
+    
+    inset
+    
+    0 2px 6px
+    
+    rgba(255,255,255,.25);
+    
+    position:relative;
+    
+    overflow:hidden;
+    
+    }
+
+.keyhole{
+
+    position:absolute;
+
+    left:50%;
+
+    top:28px;
+
+    transform:translateX(-50%);
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:white;
+
+}
+
+.keyhole::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    top:16px;
+
+    width:8px;
+
+    height:26px;
+
+    border-radius:8px;
+
+    background:white;
+
+}
+
+@keyframes breathe{
+
+    0%{
+    
+    transform:
+    translateY(0)
+    scale(1);
+    
+    }
+    
+    50%{
+    
+    transform:
+    translateY(-5px)
+    scale(1.05);
+    
+    }
+    
+    100%{
+    
+    transform:
+    translateY(0)
+    scale(1);
+    
+    }
+    
+    }
+
+/* =====================================================
+   PASSWORD
+===================================================== */
+
+#password{
+
+    width:100%;
+
+    padding:16px 22px;
+
+    border:none;
+
+    border-radius:45px;
+
+    outline:none;
+
+    font-size:17px;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.8);
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+#password:focus{
+
+    border-color:#80aa80;
+
+    box-shadow:
+    0 0 18px rgba(108,140,101,.25);
+
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.buttons{
+
+    margin-top:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:22px;
+
+}
+
+button{
+
+    min-width:145px;
+
+    padding:14px 22px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(
+        180deg,
+        #82a67f,
+        #638260
+    );
+
+    box-shadow:
+    0 10px 18px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:
+    
+    translateY(-5px)
+    
+    scale(1.05);
+    
+    box-shadow:
+    
+    0 15px 30px
+    
+    rgba(0,0,0,.18);
+    
+    }
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+#status{
+
+    margin-top:28px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#3c6d46;
+
+}
+
+/* =====================================================
+   PART C1
+   SAKURA PETALS + HINT POPUP
+===================================================== */
+
+/* ---------- Individual Petal ---------- */
+
+.petal{
+
+    position:absolute;
+    
+    animation-name: fall, sway;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    top:-80px;
+    
+    width:22px;
+    height:18px;
+    
+    background:
+    radial-gradient(circle at 30% 30%,
+    #ffe9f2,
+    #ffb7d1 65%,
+    #fd6f9a);
+    
+    border-radius:
+    70% 20% 70% 25%;
+    
+    opacity:.95;
+    
+    filter:
+    
+    drop-shadow(
+    0 0 8px
+    rgba(255,180,210,.45));
+    
+    pointer-events:none;
+    
+    }
+
+/* little variation */
+
+.petal.small{
+
+    width:12px;
+    height:10px;
+
+    opacity:.8;
+
+}
+
+.petal.large{
+
+    width:24px;
+    height:18px;
+
+}
+
+/* ---------- Falling ---------- */
+
+@keyframes fall{
+
+    0%{
+
+        transform:
+            translateY(-80px)
+            rotate(0deg);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(115vh)
+            rotate(540deg);
+
+    }
+
+}
+
+/* ---------- Wind ---------- */
+
+@keyframes sway{
+
+    0%{
+
+        margin-left:0;
+
+    }
+
+    25%{
+
+        margin-left:25px;
+
+    }
+
+    50%{
+
+        margin-left:-20px;
+
+    }
+
+    75%{
+
+        margin-left:18px;
+
+    }
+
+    100%{
+
+        margin-left:0;
+
+    }
+
+}
+
+/* =====================================================
+   HINT POPUP
+===================================================== */
+
+#hintPopup{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.18);
+
+    backdrop-filter:blur(6px);
+
+    visibility:hidden;
+
+    opacity:0;
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+/* JS will add this class */
+
+#hintPopup.show{
+
+    visibility:visible;
+
+    opacity:1;
+
+}
+
+/* ---------- Popup Card ---------- */
+
+.popup{
+
+    width:380px;
+
+    background:rgba(255,255,255,.94);
+
+    border-radius:24px;
+
+    padding:28px;
+
+    box-shadow:
+
+    0 18px 45px rgba(0,0,0,.18);
+
+    position:relative;
+
+    animation:popupIn .35s ease;
+
+    backdrop-filter:blur(20px);
+
+}
+
+/* ---------- Popup Animation ---------- */
+
+@keyframes popupIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+            translateY(20px)
+
+            scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+            translateY(0)
+
+            scale(1);
+
+    }
+
+}
+
+/* ---------- Heading ---------- */
+
+.popup h2{
+
+    text-align:center;
+
+    font-size:28px;
+
+    color:#567454;
+
+    margin-bottom:15px;
+
+}
+
+/* ---------- Divider ---------- */
+
+.popup .line{
+
+    width:100%;
+
+    height:2px;
+
+    background:
+
+    linear-gradient(
+
+    to right,
+
+    transparent,
+
+    #aacba5,
+
+    transparent
+
+    );
+
+    margin:18px 0;
+
+}
+
+/* ---------- Hint Text ---------- */
+
+.popup p{
+
+    font-size:17px;
+
+    color:#495b49;
+
+    line-height:1.9;
+
+    text-align:center;
+
+}
+
+/* ---------- Close Button ---------- */
+
+#closePopup{
+
+    position:absolute;
+
+    top:16px;
+    right:16px;
+
+    width:38px;
+    height:38px;
+
+    min-width:0;
+    min-height:0;
+
+    padding:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(139, 188, 118, 0.95);
+
+    font-size:22px;
+
+}
+
+#closePopup:hover{
+
+    background:#44743a;
+
+    transform:rotate(90deg) scale(1.08);
+
+    box-shadow:
+        0 6px 16px rgba(0,0,0,.12);
+
+}
+
+/* =====================================================
+   POPUP SHADOW GLOW
+===================================================== */
+
+.popup::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:24px;
+
+    padding:2px;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    rgba(255,255,255,.8),
+
+    rgba(180,220,180,.45)
+
+    );
+
+    -webkit-mask:
+
+    linear-gradient(#fff 0 0) content-box,
+
+    linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+            mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+
+/* =====================================================
+   PART C2 (HALF 1)
+   LOCK OPEN + PARTICLE TRANSITION
+===================================================== */
+
+/* ---------- Lock Opening ---------- */
+
+#lock.unlocking{
+
+    animation:none;
+
+}
+
+#lock.unlocking .lock-shackle{
+
+    animation: shackleOpen .8s forwards;
+
+    transform-origin:left bottom;
+
+}
+
+@keyframes shackleOpen{
+
+    0%{
+
+        transform:
+            rotate(0deg)
+            translateY(0);
+
+        opacity:1;
+
+    }
+
+    40%{
+
+        transform:
+            rotate(-35deg)
+            translate(-8px,-8px);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+            rotate(-55deg)
+            translate(-15px,-18px)
+            scale(.8);
+
+        opacity:0;
+
+        filter:blur(4px);
+
+    }
+
+}
+
+/* Fade body */
+
+#lock.unlocking .lock-body{
+
+    animation:
+        bodyFade .8s forwards;
+
+}
+
+@keyframes bodyFade{
+
+    0%{
+
+        opacity:1;
+
+        transform:scale(1);
+
+        filter:blur(0);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:scale(.85);
+
+        filter:blur(6px);
+
+    }
+
+}
+
+/* =====================================================
+   PARTICLE LAYER
+===================================================== */
+
+#particleCanvas{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:100;
+
+}
+
+/* =====================================================
+   SCREEN TRANSITION
+===================================================== */
+
+.transition-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:transparent;
+
+    pointer-events:none;
+
+    opacity:0;
+
+    z-index:200;
+
+    transition:
+        opacity
+        .8s ease;
+
+}
+
+/* JS adds this */
+
+.transition-overlay.active{
+
+    opacity:1;
+
+}
+
+/* =====================================================
+   PETAL STORM
+===================================================== */
+
+body.transitioning .petal{
+
+    animation-duration:4s,2s !important;
+
+    opacity:1;
+
+    filter:
+
+    drop-shadow(
+
+    0 3px 8px
+
+    rgba(255,180,210,.6)
+
+    );
+
+}
+
+/* =====================================================
+   SCREEN FADE
+===================================================== */
+
+body.fadeOut{
+
+    animation:
+
+    pageFade
+
+    1.8s
+
+    forwards;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:1;
+
+        filter:blur(0);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        filter:blur(12px);
+
+    }
+
+}
+
+/* =====================================================
+   SUCCESS MESSAGE
+===================================================== */
+
+#status.success{
+
+    color:#5a8457;
+
+    font-weight:700;
+
+    animation:
+
+    successPulse
+
+    1.2s infinite;
+
+}
+
+@keyframes successPulse{
+
+    0%{
+
+        opacity:.5;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.5;
+
+    }
+
+}
+

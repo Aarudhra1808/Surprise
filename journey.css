@@ -1,0 +1,1141 @@
+/*=========================================
+            GOOGLE FONT
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    overflow:hidden;
+
+    height:100vh;
+
+    background:
+    radial-gradient(circle at top,#21345f 0%,#111827 35%,#05070f 100%);
+
+    color:white;
+
+}
+
+/*=========================================
+            BACKGROUND EFFECTS
+=========================================*/
+
+#stars,
+#petals,
+#sparkles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:1;
+
+}
+
+/*=========================================
+            INTRO SCREEN
+=========================================*/
+
+#introScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    radial-gradient(circle,#101d42,#04050b);
+
+    z-index:999;
+
+}
+
+.introContent{
+
+    text-align:center;
+
+    width:80%;
+
+    max-width:700px;
+
+}
+
+.heartGlow{
+
+    font-size:90px;
+
+    margin-bottom:25px;
+
+}
+
+.introContent h1{
+
+    font-size:42px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+.introContent p{
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    opacity:.85;
+
+}
+
+/*=========================================
+            MEMORY SECTION
+=========================================*/
+
+#memorySection{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+/*=========================================
+            TOP BAR
+=========================================*/
+
+.topBar{
+
+    position:absolute;
+
+    top:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:92%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    z-index:20;
+
+}
+
+/*=========================================
+            MUSIC BUTTON
+=========================================*/
+
+#musicBtn{
+
+    padding:12px 28px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    background:rgba(255,255,255,.10);
+
+    color:white;
+
+    backdrop-filter:blur(12px);
+
+}
+
+/*=========================================
+            COUNTER
+=========================================*/
+
+#counter{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+}
+
+/*=========================================
+            CENTER MEMORY
+=========================================*/
+
+.centerMemory{
+
+    position:absolute;
+
+    left:50%;
+
+    top:48%;
+
+    transform:translate(-50%,-50%);
+
+    width:430px;
+
+    height:540px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    z-index:10;
+
+    background:#111;
+
+}
+
+.centerMemory img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/*=========================================
+            CAPTION
+=========================================*/
+
+.captionBox{
+
+    position:absolute;
+
+    bottom:55px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:700px;
+
+    max-width:90%;
+
+    text-align:center;
+
+    padding:22px;
+
+    border-radius:25px;
+
+    background:rgba(255, 255, 255, 0.334);
+
+    backdrop-filter:blur(18px);
+
+    z-index:15;
+
+}
+
+#memoryTitle{
+
+    font-family:"Caveat",cursive;
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+    color: #3f3b3b;
+
+}
+
+#memoryCaption{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color: #535151;
+
+}
+
+/*=========================================
+            MEMORY RING
+=========================================*/
+
+#memoryRing{
+
+    position:absolute;
+
+    width:1050px;
+
+    height:1050px;
+
+    left:50%;
+
+    top:46%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    z-index:5;
+
+}
+
+/*=========================================
+            SMALL MEMORY
+=========================================*/
+
+.memoryPic{
+
+    position:absolute;
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+}
+
+.memoryPic img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/*=========================================
+            CONTROLS
+=========================================*/
+
+.controls{
+
+    position:absolute;
+
+    bottom:60px;
+
+    right:50px;
+
+    display:flex;
+
+    gap:18px;
+
+    z-index:20;
+
+}
+
+.controls button{
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:24px;
+
+    background:rgba(255,255,255,.10);
+
+    color:white;
+
+    backdrop-filter:blur(12px);
+
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:1100px){
+
+.centerMemory{
+
+    width:340px;
+
+    height:430px;
+
+}
+
+#memoryRing{
+
+    width:820px;
+
+    height:820px;
+
+}
+
+.memoryPic{
+
+    width:88px;
+
+    height:88px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.centerMemory{
+
+    width:260px;
+
+    height:340px;
+
+}
+
+#memoryRing{
+
+    width:560px;
+
+    height:560px;
+
+}
+
+.memoryPic{
+
+    width:62px;
+
+    height:62px;
+
+}
+
+.captionBox{
+
+    width:92%;
+
+}
+
+#memoryTitle{
+
+    font-size:32px;
+
+}
+
+#memoryCaption{
+
+    font-size:15px;
+
+}
+
+.controls{
+
+    right:20px;
+
+    bottom:25px;
+
+}
+
+}
+
+/*=========================================
+            INTRO ANIMATIONS
+=========================================*/
+
+#introScreen{
+
+    animation:introFade 5s forwards;
+
+    animation-delay:4s;
+
+}
+
+@keyframes introFade{
+
+    0%{
+
+        opacity:1;
+
+        visibility:visible;
+
+    }
+
+    90%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        visibility:hidden;
+
+    }
+
+}
+
+.heartGlow{
+
+    animation:
+
+    heartbeat 1.8s infinite,
+
+    glowHeart 3s infinite;
+
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    25%{
+
+        transform:scale(1.15);
+
+    }
+
+    40%{
+
+        transform:scale(.95);
+
+    }
+
+    60%{
+
+        transform:scale(1.22);
+
+    }
+
+}
+
+@keyframes glowHeart{
+
+    0%{
+
+        text-shadow:0 0 10px #ff5c8d;
+
+    }
+
+    50%{
+
+        text-shadow:
+        0 0 30px #ff3d7a,
+        0 0 60px #ff3d7a,
+        0 0 90px #ff9fbf;
+
+    }
+
+    100%{
+
+        text-shadow:0 0 10px #ff5c8d;
+
+    }
+
+}
+
+.introContent h1{
+
+    animation:fadeUp 2s ease;
+
+}
+
+.introContent p{
+
+    animation:fadeUp 2.5s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+            STARS
+=========================================*/
+
+.star{
+
+    position:absolute;
+
+    width:3px;
+
+    height:3px;
+
+    border-radius:50%;
+
+    background:white;
+
+    animation:twinkle 3s infinite;
+
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.2;
+
+        transform:scale(.7);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.8);
+
+    }
+
+}
+
+/*=========================================
+            SPARKLES
+=========================================*/
+
+.sparkle{
+
+    position:absolute;
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:white;
+
+    filter:blur(.5px);
+
+    animation:sparkleFloat linear infinite;
+
+}
+
+@keyframes sparkleFloat{
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    85%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-220px);
+
+        opacity:0;
+
+    }
+
+}
+
+/*=========================================
+            PETALS
+=========================================*/
+
+.petal{
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    background:#ffd6e7;
+
+    border-radius:60% 40% 60% 40%;
+
+    opacity:.9;
+
+    animation:petalFall linear infinite;
+
+}
+
+@keyframes petalFall{
+
+    from{
+
+        transform:
+
+        translateY(-100px)
+
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+
+        translateY(120vh)
+
+        translateX(150px)
+
+        rotate(720deg);
+
+    }
+
+}
+
+/*=========================================
+            MEMORY SECTION
+=========================================*/
+
+#memorySection{
+
+    opacity:0;
+
+    animation:galleryAppear 2s forwards;
+
+    animation-delay:5s;
+
+}
+
+@keyframes galleryAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*=========================================
+            CENTER IMAGE
+=========================================*/
+
+.centerMemory{
+
+    border:4px solid rgba(255,255,255,.25);
+
+    box-shadow:
+
+    0 0 25px rgba(255,180,210,.4),
+
+    0 0 70px rgba(255,100,170,.2);
+
+    animation:centerFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes centerFloat{
+
+    0%,100%{
+
+        transform:
+
+        translate(-50%,-50%)
+
+        translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+
+        translate(-50%,-50%)
+
+        translateY(-12px);
+
+    }
+
+}
+
+.centerMemory img{
+
+    transition:.6s;
+
+}
+
+.centerMemory:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*=========================================
+            MEMORY RING
+=========================================*/
+
+#memoryRing{
+
+    animation:rotateRing 70s linear infinite;
+
+}
+
+@keyframes rotateRing{
+
+    from{
+
+        transform:
+
+        translate(-50%,-50%)
+
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+
+        translate(-50%,-50%)
+
+        rotate(360deg);
+
+    }
+
+}
+
+/*=========================================
+            MEMORY PHOTO
+=========================================*/
+
+.memoryPic{
+
+    border:3px solid rgba(255,255,255,.35);
+
+    transition:.5s;
+
+    box-shadow:
+
+    0 0 12px rgba(255,255,255,.2);
+
+}
+
+.memoryPic:hover{
+
+    transform:scale(1.25);
+
+    z-index:100;
+
+    box-shadow:
+
+    0 0 25px pink,
+
+    0 0 55px hotpink,
+
+    0 0 90px deeppink;
+
+}
+
+.memoryPic img{
+
+    transition:.6s;
+
+}
+
+.memoryPic:hover img{
+
+    transform:scale(1.18);
+
+}
+
+/*=========================================
+            CAPTION
+=========================================*/
+
+.captionBox{
+
+    border:1px solid rgba(255,255,255,.15);
+
+    animation:captionGlow 5s infinite;
+
+}
+
+@keyframes captionGlow{
+
+    0%,100%{
+
+        box-shadow:0 0 12px rgba(255,255,255,.08);
+
+    }
+
+    50%{
+
+        box-shadow:
+
+        0 0 30px rgba(255,180,210,.18);
+
+    }
+
+}
+
+#memoryCaption{
+
+    opacity:0;
+
+    animation:captionFade 1s forwards;
+
+}
+
+@keyframes captionFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+            BUTTONS
+=========================================*/
+
+.controls button,
+#musicBtn{
+
+    transition:.4s;
+
+}
+
+.controls button:hover,
+#musicBtn:hover{
+
+    transform:
+
+    translateY(-4px)
+
+    scale(1.08);
+
+    background:
+
+    rgba(255,255,255,.2);
+
+    box-shadow:
+
+    0 0 25px rgba(255,180,210,.35);
+
+}
+
+.controls button:active,
+#musicBtn:active{
+
+    transform:scale(.94);
+
+}
+
+/*=========================================
+            COUNTER
+=========================================*/
+
+#counter{
+
+    text-shadow:
+
+    0 0 8px white,
+
+    0 0 20px pink;
+
+}
+
+/*=========================================
+            GLASS SHINE
+=========================================*/
+
+.centerMemory::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-150%;
+
+    left:-60%;
+
+    width:60%;
+
+    height:300%;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.25),
+
+    transparent
+
+    );
+
+    transform:rotate(20deg);
+
+    animation:shine 6s infinite;
+
+}
+
+@keyframes shine{
+
+    from{
+
+        left:-90%;
+
+    }
+
+    to{
+
+        left:170%;
+
+    }
+
+}
+
+/*=========================================
+            PAGE GLOW
+=========================================*/
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(255,120,180,.06),
+
+    transparent 70%);
+
+    pointer-events:none;
+
+    animation:ambientGlow 8s ease-in-out infinite;
+
+}
+
+@keyframes ambientGlow{
+
+    0%,100%{
+
+        opacity:.4;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+}
+
+/*=========================================
+            PAUSE ROTATION
+=========================================*/
+
+#memoryRing:hover{
+
+    animation-play-state:paused;
+
+}
+
+/*=========================================
+            SMOOTH EVERYTHING
+=========================================*/
+
+button,
+img,
+div{
+
+    user-select:none;
+
+    -webkit-user-select:none;
+
+}

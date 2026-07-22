@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Authentication Required</title>
+
+    <link rel="stylesheet" href="unlock.css">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ===================================
+Background
+=================================== -->
+
+<div class="background">
+
+    <div class="gradient"></div>
+
+    <canvas id="particleCanvas"></canvas>
+
+    <div id="petal-container"></div>
+
+</div>
+
+
+<!-- ===================================
+Cherry Blossom Branches
+=================================== -->
+
+<img
+class="branch top-left"
+src="blossom1.png"
+alt="">
+
+<img
+class="branch top-right"
+src="blossom2.png"
+alt="">
+
+<img
+class="branch bottom-left"
+src="blossom4.png"
+alt="">
+
+<img
+class="branch bottom-right"
+src="blossom3.png"
+alt="">
+
+
+<!-- ===================================
+Main Container
+=================================== -->
+
+<div class="container">
+
+<h1>
+
+AUTHENTICATION REQUIRED
+
+</h1>
+
+<p class="subtitle">
+
+Enter the secret password to continue
+
+</p>
+
+
+<!-- ===============================
+LOCK
+=============================== -->
+
+<div id="lock">
+
+<div class="lock-shackle"></div>
+
+<div class="lock-body">
+
+<div class="keyhole"></div>
+
+</div>
+
+</div>
+
+
+<!-- ===============================
+Password
+=============================== -->
+
+<input
+
+id="password"
+
+type="password"
+
+placeholder="Enter Password"
+
+autocomplete="off"
+
+>
+
+
+<!-- ===============================
+Buttons
+=============================== -->
+
+<div class="buttons">
+
+<button id="hintBtn">
+
+🌸 Hint
+
+</button>
+
+<button id="unlockBtn">
+
+🔓 Unlock
+
+</button>
+
+</div>
+
+
+<p id="status"></p>
+
+</div>
+
+
+<!-- ===================================
+Hint Popup
+=================================== -->
+
+<div id="hintPopup">
+
+<div class="popup">
+
+<button id="closePopup">
+
+✕
+
+</button>
+
+<h2>
+
+🌸 Hint 🌸
+
+</h2>
+
+<div class="line"></div>
+
+<p>
+
+    🔑 The full form of our secret code word (with space). 😉
+
+</p>
+
+<div class="line"></div>
+
+</div>
+
+</div>
+
+
+
+<script src="unlock.js"></script>
+
+</body>
+
+</html>

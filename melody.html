@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Melody Jar ❤️</title>
+
+<link rel="stylesheet"
+href="melody.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!--=========================================
+                BACKGROUND
+==========================================-->
+
+<div class="background">
+
+<div class="gradient-bg"></div>
+
+<div class="stars"></div>
+
+<div class="floating-petals"></div>
+
+<div class="sparkle-layer"></div>
+
+<div class="music-particle-layer"></div>
+
+</div>
+
+
+<!--=========================================
+                PAGE TITLE
+==========================================-->
+
+<header class="page-header">
+
+<h1>
+
+🎵
+Melody Jar
+🎵
+
+</h1>
+
+<p>
+
+18 songs.
+
+18 little pieces of my heart.
+
+Denoting your 18th Birthday
+
+</p>
+
+</header>
+
+
+
+<!--=========================================
+            MAIN CONTAINER
+==========================================-->
+
+<main class="main-container">
+
+
+<!--=========================================
+                JAR SECTION
+==========================================-->
+
+<section class="jar-section">
+
+
+<div class="jar-wrapper">
+
+
+<div
+class="jar-glow"
+id="jarGlow">
+
+</div>
+
+
+<div
+class="melody-jar"
+id="jar">
+
+
+<div class="jar-lid"></div>
+
+<div class="jar-glass"></div>
+
+<div class="jar-shimmer"></div>
+
+
+<!--=========================
+        MUSIC NOTES
+==========================-->
+
+<div class="notes-container">
+
+
+<div class="music-note"
+data-song="0">🎵</div>
+
+<div class="music-note"
+data-song="1">🎶</div>
+
+<div class="music-note"
+data-song="2">🎼</div>
+
+<div class="music-note"
+data-song="3">🎵</div>
+
+<div class="music-note"
+data-song="4">🎶</div>
+
+<div class="music-note"
+data-song="5">🎼</div>
+
+<div class="music-note"
+data-song="6">🎵</div>
+
+<div class="music-note"
+data-song="7">🎶</div>
+
+<div class="music-note"
+data-song="8">🎼</div>
+
+<div class="music-note"
+data-song="9">🎵</div>
+
+<div class="music-note"
+data-song="10">🎶</div>
+
+<div class="music-note"
+data-song="11">🎼</div>
+
+<div class="music-note"
+data-song="12">🎵</div>
+
+<div class="music-note"
+data-song="13">🎶</div>
+
+<div class="music-note"
+data-song="14">🎼</div>
+
+<div class="music-note"
+data-song="15">🎵</div>
+
+<div class="music-note"
+data-song="16">🎶</div>
+
+<div class="music-note"
+data-song="17">🎼</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!--=========================================
+            PLAYER SECTION
+==========================================-->
+
+<section
+
+id="playerPanel"
+
+class="player-panel hidden"
+
+>
+
+
+<div class="player-card">
+
+
+<div class="album-section">
+
+<img
+
+id="albumImage"
+
+src=""
+
+alt="Album Cover"
+
+>
+
+</div>
+
+
+<div class="song-info">
+
+<h2
+id="songTitle">
+
+Song Title
+
+</h2>
+
+<p
+id="songMessage">
+
+Special message...
+
+</p>
+
+</div>
+
+
+
+<div class="time-row">
+
+<span
+id="currentTimeLabel">
+
+0:00
+
+</span>
+
+<input
+
+type="range"
+
+min="0"
+
+max="100"
+
+value="0"
+
+id="progressBar"
+
+>
+
+<span
+id="durationLabel">
+
+0:00
+
+</span>
+
+</div>
+
+
+
+<div class="controls">
+
+<button
+id="previousBtn">
+
+⏮
+
+</button>
+
+<button
+id="playPauseBtn">
+
+▶
+
+</button>
+
+<button
+id="nextBtn">
+
+⏭
+
+</button>
+
+</div>
+
+
+<button
+
+id="backButton"
+
+class="back-btn"
+
+>
+
+Close
+
+</button>
+
+
+</div>
+
+</section>
+
+
+
+<!--=========================================
+            FINAL MESSAGE
+==========================================-->
+
+<section
+id="finalMessage"
+class="final-message hidden">
+
+<div class="message-card">
+
+<div class="heart">
+❤️
+</div>
+
+<h2>
+ I hope you loved it❤️
+</h2>
+
+<p>
+
+You listened to every little melody
+I prepared for you.
+
+I hope every song reminded you
+how much you mean to me.
+
+Now let's continue our journey...
+
+</p>
+
+<button
+id="continueButton">
+
+Back to Gifts 🎁
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<!--=========================================
+            AUDIO PLAYER
+==========================================-->
+
+<audio
+
+id="audioPlayer"
+
+preload="metadata"
+
+>
+
+</audio>
+
+
+
+<!--=========================================
+        PARTICLE CONTAINERS
+==========================================-->
+
+<div id="particleLayer"></div>
+
+<div id="magicLayer"></div>
+
+<div id="vinylLayer"></div>
+
+
+
+<script src="melody.js"></script>
+
+</body>
+
+</html>

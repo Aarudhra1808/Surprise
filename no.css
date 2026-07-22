@@ -1,0 +1,491 @@
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        margin:0;
+        overflow:hidden;
+        height:100vh;
+
+        background:
+        linear-gradient(
+            to bottom,
+            #000000 0%,
+            #040912 45%,
+            #08111f 100%
+        );
+
+        font-family:Segoe UI,sans-serif;
+        animation:fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn{
+
+        from{
+        
+        opacity:0;
+        
+        }
+        
+        to{
+        
+        opacity:1;
+        
+        }
+        
+        }
+    /* Background */
+
+    #stars{
+        position:absolute;
+        inset:0;
+        overflow:hidden;
+    }
+
+    .star{
+
+        position:absolute;
+
+        width:2px;
+        height:2px;
+
+        background:white;
+
+        transition:1s;
+
+        border-radius:50%;
+
+        opacity:.15;
+
+        animation:twinkle 8s linear infinite;
+    }
+
+    @keyframes twinkle{
+
+    0%,100%{
+    opacity:.2;
+    transform:scale(1);
+    }
+
+    50%{
+    opacity:1;
+    transform:scale(1.8);
+    }
+
+    }
+
+    /* Moon */
+
+    .moon{
+
+        position:fixed;
+        top:50px;
+        right:30px;
+
+        width:130px;
+        height:130px;
+
+        border-radius:50%;
+
+        border:1px solid rgba(255,255,255,.08);
+
+        transition:1s;
+
+        background:
+        radial-gradient(circle at 35% 30%,
+        #d9d9d9 0%,
+        #bdbdbd 55%,
+        #8f8f8f 100%);
+
+        overflow:hidden;
+        z-index:1000;
+
+        filter:brightness(.45)grayscale(.55);
+
+        box-shadow:
+            0 0 5px rgba(255,255,255,.12),
+            0 0 15px rgba(255,255,255,.08);
+
+        animation:moonGlow 6s ease-in-out infinite;
+
+        transition:
+        transform 1.8s ease,
+        filter .8s ease,
+        box-shadow .8s ease,
+        background .8s ease;
+    }
+
+    .moon.bright{
+
+        filter:grayscale(0) brightness(1);
+    
+        background:
+        radial-gradient(circle at 35% 30%,
+            #fffef4,
+            #f9f4d8 45%,
+            #f1e8b9 75%,
+            #e6dca6 100%);
+    
+        box-shadow:
+            0 0 15px rgba(255,255,255,.9),
+            0 0 40px rgba(255,255,220,.7),
+            0 0 90px rgba(255,255,220,.5);
+    
+    }
+
+    .moon.zoom{
+
+        animation:none !important;
+    
+        transform:scale(25);
+        z-index:99999;
+    
+    }
+
+    @keyframes moonGlow{
+
+        0%{
+            filter:
+            brightness(.45)
+            drop-shadow(0 0 6px rgba(255,255,255,.15));
+        }
+    
+        50%{
+            filter:
+            brightness(.55)
+            drop-shadow(0 0 15px rgba(255,255,255,.35));
+        }
+    
+        100%{
+            filter:
+            brightness(.45)
+            drop-shadow(0 0 6px rgba(255,255,255,.15));
+        }
+    
+    }
+            .moon::before{
+
+                content:"";
+                position:absolute;
+                inset:0;
+                border-radius:50%;
+            
+                background:
+            
+                    radial-gradient(circle at 35px 38px,
+                        rgba(190,182,145,.38) 0 15px,
+                        transparent 16px),
+            
+                    radial-gradient(circle at 92px 72px,
+                        rgba(190,182,145,.30) 0 12px,
+                        transparent 13px),
+            
+                    radial-gradient(circle at 112px 38px,
+                        rgba(190,182,145,.28) 0 8px,
+                        transparent 9px),
+            
+                    radial-gradient(circle at 52px 102px,
+                        rgba(190,182,145,.24) 0 7px,
+                        transparent 8px),
+            
+                    radial-gradient(circle at 24px 82px,
+                        rgba(190,182,145,.30) 0 14px,
+                        transparent 15px),
+            
+                    radial-gradient(circle at 104px 105px,
+                        rgba(190,182,145,.24) 0 10px,
+                        transparent 11px),
+            
+                    radial-gradient(circle at 70px 55px,
+                        rgba(255,255,255,.10),
+                        transparent 60%);
+            
+            }
+                    @keyframes moonRotate{
+
+                        0%{
+                        
+                        transform:translateY(0px) rotate(0deg);
+                        
+                        }
+                        
+                        50%{
+                        
+                        transform:translateY(-8px) rotate(.4deg);
+                        
+                        }
+                        
+                        100%{
+                        
+                        transform:translateY(0px) rotate(0deg);
+                        
+                        }
+                        
+                        }
+                        .moon::after{
+
+                            content:"";
+                            position:absolute;
+                            inset:-55px;
+                        
+                            border-radius:50%;
+                        
+                            background:
+                                radial-gradient(circle,
+                                rgba(255,255,255,.18),
+                                rgba(255,255,255,.08) 45%,
+                                transparent 72%);
+                        
+                            z-index:-1;
+                        }
+    /* Center Content */
+
+    .overlay{
+
+        height:100vh;
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+        flex-direction:column;
+
+        color:white;
+
+        text-align:center;
+        
+        position:relative;
+        z-index:5;
+
+    }
+
+    /* Heading */
+
+    .message{
+
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        
+        margin-bottom:60px;
+        
+        }
+        
+        .message h2{
+
+            margin:12px 0;
+        
+            color:white;
+        
+            opacity:.95;
+        
+            font-weight:500;
+        
+            min-height:42px;
+        
+        }
+        
+        #line1{
+        
+        font-size:2.4rem;
+        
+        }
+        
+        #line2{
+        
+        font-size:2rem;
+        
+        }
+        
+        #line3{
+        
+        font-size:2rem;
+        
+        }
+        
+        #line4{
+
+            font-size:4rem;
+        
+            color:#ffffff;
+        
+            font-weight:700;
+        
+            margin-top:15px;
+        
+            text-shadow:
+                0 0 10px rgba(255,255,255,.35),
+                0 0 25px rgba(255,255,255,.18);
+        
+            animation:breathe 2.8s ease-in-out infinite;
+        
+        }
+        
+        #line4 span{
+            color:#ffd6e5;
+            text-shadow:
+                0 0 12px #ffffff,
+                0 0 30px #ffb3c7;
+        }
+        
+        #line5{
+        
+        font-size:2.3rem;
+        
+        font-weight:700;
+        
+        margin-top:25px;
+        
+        color:white;
+        
+        }
+
+    /* Button */
+
+    .buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:35px;
+
+    margin-top:-40px;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.5s;
+
+    position:relative;
+    z-index:100;
+
+
+    }
+
+    #yesBtn{
+
+        width:240px;
+        height:74px;
+        
+        border:none;
+        
+        border-radius:50px;
+        
+        font-size:32px;
+        
+        cursor:pointer;
+        
+        background:#d90036;
+        
+        color:white;
+        
+        transition:.3s;
+        
+        box-shadow:
+        
+        0 0 15px rgba(255,0,60,.4);
+        
+        }
+        
+        #yesBtn:hover{
+        
+        transform:scale(1.08);
+        
+        box-shadow:
+        
+        0 0 20px crimson,
+        
+        0 0 40px rgba(255,0,60,.5);
+        
+        }
+
+
+        #noBtn{
+
+            width:180px;
+            height:74px;
+            
+            border:none;
+            
+            border-radius:50px;
+            
+            font-size:30px;
+            
+            cursor:pointer;
+            
+            background:#444;
+            
+            color:white;
+            
+            transition:.35s;
+            
+            }
+        
+            #noBtn:hover{
+
+                background:#555;
+                
+                }
+            #yesBtn,
+                #noBtn{
+                
+                    position:relative;
+                    z-index:101;
+                    pointer-events:auto;
+                
+                }
+
+    /* Twinkle */
+
+    .fadeAway{
+
+        animation:bye .6s forwards;
+        
+        }
+        
+        @keyframes bye{
+        
+        0%{
+        
+        opacity:1;
+        
+        transform:scale(1);
+        
+        }
+        
+        100%{
+        
+        opacity:0;
+        
+        transform:scale(.5);
+        
+        }
+    }
+
+    @keyframes breathe{
+
+        0%,100%{
+    
+            transform:scale(1);
+            opacity:.9;
+    
+        }
+    
+        50%{
+    
+            transform:scale(1.04);
+            opacity:1;
+    
+        }
+    
+    }

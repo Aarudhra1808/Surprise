@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Love Letter</title>
+
+    <link rel="stylesheet"
+          href="letter.css">
+
+</head>
+
+<body>
+
+<!--=====================================
+            BACKGROUND
+======================================-->
+
+<div class="background">
+
+    <img src="letter.png"
+         class="bg-image"
+         alt="Background">
+
+    <div class="overlay"></div>
+
+    <div id="particles"></div>
+
+    <div id="fireflies"></div>
+
+    <div id="petals"></div>
+
+</div>
+
+
+
+<!--=====================================
+            MAIN SCENE
+======================================-->
+
+<main class="scene">
+
+    <!-- LEFT TREE -->
+
+    <svg id="leftTree"
+         class="tree left-tree"
+         viewBox="0 0 600 700">
+
+    </svg>
+
+
+
+    <!--==============================
+            CENTER
+    ==============================-->
+
+    <section class="center-area">
+
+        <!-- Floating Heart -->
+         <h1 class="page-title">A Letter for You!!</h1>
+
+        <div class="heartGlow">
+
+            ❤
+
+        </div>
+        <p class="click-text">
+    Click Me ⬇️
+</p>
+
+
+
+        <!--==============================
+                ENVELOPE
+        ==============================-->
+
+        <div class="envelope"
+             id="envelope">
+
+            <!-- Back Body -->
+
+            <div class="env-back"></div>
+
+            <!-- Hidden Letter -->
+
+            <div class="letter"
+                 id="letter">
+
+                <div class="paper">
+
+                    <h1>Dear Vigo,</h1>
+
+                    <div class="letter-content">
+
+                        <!-- Your letter goes here -->
+
+                        <p>
+
+                            Happy 18 to my dearest purusha,
+
+                        </p>
+
+                        <p>
+
+                            I am really happy that I am here present today to celebrate your 18th birthday with you. 
+                            I am really lucky to have you in my life dear. I am happy to be with you when you are stepping into the 
+                            most important phase of your life that is adulthood. Ik this phase come with bundles of happiness, 
+                            sadness and alot of stress but I ensure you dear I will alwys be there having your back and supporting you 
+                            with all my heart and provide you all my love and will alwys believe in you. So dont worry abt anything darling.
+                            Just enjoy each and every phase of life to the fullest cause we all live once and we cant have regrets right.
+                            May god bless you and you alwys deserve to be happy da.. 
+                            So be happy enjoy your day dear. I may not be near you rn but Ik I am alwys in ur thought and mind like the way you are in mine.
+                            Be happy enjoy each and every moment and dont overthink cause life is wht we think it as and trust me we can make it simple
+                            So once again Happy birthday to the only person who was,is and will be mine always.
+
+                        </p>
+                        <p>I LOVE YOU PURUSHAAAAA❤️</p>
+                        <p>-Ruru❤️</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Inner Cream Paper Holder -->
+
+            <div class="env-inside"></div>
+
+            <!-- Top Flap -->
+
+            <div class="flap"></div>
+
+            <!-- Front Pocket -->
+
+            <div class="front"></div>
+
+            <!-- Wax Seal -->
+
+            <div class="seal">
+
+                ❤
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- RIGHT TREE -->
+
+    <svg id="rightTree"
+         class="tree right-tree"
+         viewBox="0 0 600 700">
+
+    </svg>
+
+</main>
+
+
+
+<!--=====================================
+            MAGIC LAYERS
+======================================-->
+
+<div id="magicLayer"></div>
+
+<div id="leafLayer"></div>
+
+<div id="flowerLayer"></div>
+
+<div id="sparkLayer"></div>
+
+
+
+<!--=====================================
+        CONTINUE BUTTON
+======================================-->
+
+<button id="continueBtn">
+
+    Continue ❤️
+
+</button>
+
+
+
+<!--=====================================
+                AUDIO
+======================================-->
+
+<audio id="openAudio">
+
+    <source src="audio/open.mp3"
+            type="audio/mpeg">
+
+</audio>
+
+<audio id="magicAudio">
+
+    <source src="audio/magic.mp3"
+            type="audio/mpeg">
+
+</audio>
+
+<audio id="windAudio" loop>
+
+    <source src="audio/wind.mp3"
+            type="audio/mpeg">
+
+</audio>
+
+
+
+<script src="letter.js"></script>
+
+</body>
+</html>

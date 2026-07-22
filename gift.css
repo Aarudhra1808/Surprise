@@ -1,0 +1,872 @@
+/* ===========================
+   GOOGLE FONT RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Quicksand',sans-serif;
+
+    overflow:hidden;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    background:linear-gradient(
+        180deg,
+        #dff4ff 0%,
+        #d5f0ff 20%,
+        #c8ebff 40%,
+        #d8ecff 60%,
+        #eef8ff 80%,
+        #ffffff 100%
+    );
+
+}
+
+
+/* ===========================
+      MAIN CONTAINER
+=========================== */
+
+.container{
+
+    width:100%;
+
+    max-width:1400px;
+
+    text-align:center;
+
+    z-index:5;
+
+    padding:40px;
+
+}
+
+
+/* ===========================
+          TITLE
+=========================== */
+
+.title{
+
+    font-size:3.5rem;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,.9),
+        0 0 25px rgba(132,197,255,.8);
+
+    margin-bottom:18px;
+
+}
+
+
+/* ===========================
+        SUBTITLE
+=========================== */
+
+.subtitle{
+
+    font-size:1.3rem;
+
+    color:#4d6f91;
+
+    margin-bottom:90px;
+
+    font-weight:600;
+
+}
+
+
+/* ===========================
+       GIFT CONTAINER
+=========================== */
+
+.gift-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:110px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* ===========================
+         GIFT BOX
+=========================== */
+
+.gift-box{
+
+    width:210px;
+
+    height:190px;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+
+
+}
+
+
+/* ===========================
+         GIFT BODY
+=========================== */
+
+.gift-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:145px;
+
+    background:linear-gradient(
+        180deg,
+        #ff5d5d,
+        #ff3d3d
+    );
+
+    border-radius:10px;
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,.18);
+
+}
+
+
+/* ===========================
+            LID
+=========================== */
+
+.gift-lid{
+
+    position:absolute;
+
+    top:0;
+
+    left:-6px;
+
+    width:222px;
+
+    height:48px;
+
+    background:linear-gradient(
+        180deg,
+        #ff7676,
+        #ff5050
+    );
+
+    border-radius:12px;
+
+    z-index:5;
+
+}
+
+
+/* ===========================
+      VERTICAL RIBBON
+=========================== */
+
+.gift-ribbon-vertical{
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:30px;
+
+    height:74%;
+
+    margin-top: 50px;
+
+    background:linear-gradient(
+        180deg,
+        #7dc7ff,
+        #3d8dff,
+        #6fb9ff
+    );
+
+    z-index:6;
+
+}
+
+
+/* ===========================
+     HORIZONTAL RIBBON
+=========================== */
+
+.gift-ribbon-horizontal{
+
+    position:absolute;
+
+    top:100px;
+
+    left:0;
+
+    width:100%;
+
+    height:26px;
+
+    background:linear-gradient(
+        90deg,
+        #78c4ff,
+        #2d82ff,
+        #78c4ff
+    );
+
+    z-index:7;
+
+}
+
+
+/* ===========================
+          GIFT BOW
+=========================== */
+
+.gift-box::after{
+
+    content:"🎀";
+
+    position:absolute;
+
+    top:-28px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:48px;
+
+    z-index:20;
+
+}
+
+
+/* ===========================
+            SHADOW
+=========================== */
+
+.gift-shadow{
+
+    position:absolute;
+
+    bottom:-18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:145px;
+
+    height:20px;
+
+    background:rgba(0,0,0,.16);
+
+    border-radius:50%;
+
+    filter:blur(9px);
+
+}
+
+
+/* ===========================
+      SPARKLE LAYER
+=========================== */
+
+.sparkles{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+
+/* ===========================
+      MOBILE FRIENDLY
+=========================== */
+
+@media(max-width:900px){
+
+    .gift-container{
+
+        flex-direction:column;
+
+        gap:80px;
+
+        align-items:center;
+
+    }
+
+    .title{
+
+        font-size:2.5rem;
+
+    }
+
+    .subtitle{
+
+        font-size:1rem;
+
+        margin-bottom:60px;
+
+    }
+
+}
+
+/* ===========================================
+   PART 2B - ANIMATIONS & SPECIAL EFFECTS
+   Add BELOW Part 2A
+=========================================== */
+
+
+/* ===========================
+      PAGE LOAD ANIMATION
+=========================== */
+
+.container{
+    animation:fadeIn 1.4s ease forwards;
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ===========================
+      GIFT ENTRANCE
+=========================== */
+
+.gift-box{
+
+    animation:
+
+        giftDrop 1.2s ease forwards,
+
+        giftBounce 2.8s ease-in-out infinite;
+
+}
+
+.gift-box:nth-child(1){
+
+    animation-delay:.2s,.9s;
+
+}
+
+.gift-box:nth-child(2){
+
+    animation-delay:.5s,1.2s;
+
+}
+
+.gift-box:nth-child(3){
+
+    animation-delay:.8s,1.5s;
+
+}
+
+
+@keyframes giftDrop{
+
+    0%{
+
+        opacity:0;
+        transform:translateY(-350px);
+
+    }
+
+    65%{
+
+        opacity:1;
+        transform:translateY(20px);
+
+    }
+
+    82%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* ===========================
+      CONTINUOUS BOUNCE
+=========================== */
+
+@keyframes giftBounce{
+
+    0%{
+
+        transform:translateY(0) scaleX(1);
+
+    }
+
+    20%{
+
+        transform:translateY(-16px) scaleX(.98);
+
+    }
+
+    40%{
+
+        transform:translateY(-32px) scaleX(.96);
+
+    }
+
+    50%{
+
+        transform:translateY(-36px) scaleY(1.03);
+
+    }
+
+    65%{
+
+        transform:translateY(-18px);
+
+    }
+
+    80%{
+
+        transform:translateY(2px) scaleY(.97);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ===========================
+      SHADOW ANIMATION
+=========================== */
+
+.gift-shadow{
+
+    animation:shadowMove 2.8s ease-in-out infinite;
+
+}
+
+@keyframes shadowMove{
+
+    0%{
+
+        width:145px;
+        opacity:.22;
+
+    }
+
+    50%{
+
+        width:95px;
+        opacity:.08;
+
+    }
+
+    100%{
+
+        width:145px;
+        opacity:.22;
+
+    }
+
+}
+
+
+/* ===========================
+      GIFT HOVER
+=========================== */
+
+.gift-box:hover{
+
+    transform:translateY(-15px) scale(1.15);
+
+    filter:
+        drop-shadow(0 12px 30px rgba(0,0,0,.18))
+        drop-shadow(0 0 30px rgba(120,180,255,.8));
+
+    z-index:100;
+
+}   
+
+
+/* ===========================
+      RIBBON WIGGLE
+=========================== */
+
+.gift-box:hover .gift-ribbon-vertical,
+.gift-box:hover .gift-ribbon-horizontal{
+
+    filter: brightness(1.15);
+
+    box-shadow:
+        0 0 12px rgba(120,190,255,.7);
+
+}
+
+
+
+
+/* ===========================
+      GLOWING LID
+=========================== */
+
+.gift-box:hover .gift-lid{
+
+    box-shadow:
+
+        0 0 18px rgba(255,255,255,.8),
+
+        0 0 40px rgba(95,170,255,.7);
+
+}
+
+
+/* ===========================
+      FLOATING BOKEH
+=========================== */
+
+body::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle,rgba(255,255,255,.7) 0 3px,transparent 4px),
+
+    radial-gradient(circle,rgba(255,255,255,.5) 0 5px,transparent 6px),
+
+    radial-gradient(circle,rgba(255,255,255,.4) 0 2px,transparent 3px);
+
+    background-size:
+
+    240px 240px,
+
+    320px 320px,
+
+    180px 180px;
+
+    animation:bokehFloat 18s linear infinite;
+
+    opacity:.45;
+
+    pointer-events:none;
+
+}
+
+
+@keyframes bokehFloat{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-220px);
+
+    }
+
+}
+
+
+/* ===========================
+      TWINKLING STARS
+=========================== */
+
+.sparkles::before,
+.sparkles::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    radial-gradient(circle,#ffffff 1px,transparent 2px);
+
+    background-size:70px 70px;
+
+    animation:twinkle 5s linear infinite;
+
+    opacity:.55;
+
+}
+
+.sparkles::after{
+
+    animation-duration:8s;
+
+    opacity:.35;
+
+}
+
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:.2;
+
+    }
+
+    25%{
+
+        opacity:.8;
+
+    }
+
+    50%{
+
+        opacity:.35;
+
+    }
+
+    75%{
+
+        opacity:.9;
+
+    }
+
+    100%{
+
+        opacity:.2;
+
+    }
+
+}
+
+
+/* ===========================
+      SUBTITLE GLOW
+=========================== */
+
+.subtitle{
+
+    animation:subtitleGlow 3s ease-in-out infinite;
+
+}
+
+@keyframes subtitleGlow{
+
+    0%{
+
+        opacity:.75;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        text-shadow:
+
+        0 0 15px rgba(255,255,255,.8);
+
+    }
+
+    100%{
+
+        opacity:.75;
+
+    }
+
+}
+
+
+/* ===========================
+      POINTER CURSOR
+=========================== */
+
+.gift-box{
+
+    cursor:pointer;
+
+}
+
+
+/* ===========================
+      CLICK FEEDBACK
+=========================== */
+
+.gift-box:active{
+
+    transform:scale(.95);
+
+}
+
+.giftSparkle{
+
+    position:fixed;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+
+        0 0 10px white,
+
+        0 0 20px #8ecfff,
+
+        0 0 30px #8ecfff;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+    animation:sparkleFly 1.2s ease-out forwards;
+
+}
+
+@keyframes sparkleFly{
+
+    from{
+
+        transform:translate(0,0) scale(1);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+
+            translate(var(--x),var(--y))
+
+            scale(0);
+
+        opacity:0;
+
+    }
+
+}
+
+.giftConfetti{
+
+    position:fixed;
+
+    top:-20px;
+
+    width:10px;
+
+    height:16px;
+
+    border-radius:2px;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+    animation:confettiFall linear forwards;
+
+}
+
+@keyframes confettiFall{
+
+    from{
+
+        transform:
+
+            translateY(0)
+
+            rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+
+            translateY(110vh)
+
+            rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
